@@ -1,3 +1,4 @@
+#!/bin/sh
 ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime #i ,, dont know
 hwclock --systohc
 
