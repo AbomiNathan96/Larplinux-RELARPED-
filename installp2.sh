@@ -32,5 +32,9 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 timedatectl set-ntp true
+wget https://github.com/AbomiNathan96/Larplinux-RELARPED-/raw/refs/heads/main/mkinitcpio.conf
+mv mkinitcpio.conf /etc
+mkinitcpio -p linux
+
 #exit#exit the chroot
 #umount -R /mnt
