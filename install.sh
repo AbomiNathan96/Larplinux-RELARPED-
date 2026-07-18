@@ -36,4 +36,4 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cd /mnt
 wget https://raw.githubusercontent.com/AbomiNathan96/Larplinux-RELARPED-/refs/heads/main/installp2.sh
 chmod +x installp2.sh
-arch-chroot /mnt installp2.sh
+arch-chroot /mnt sh installp2.sh
