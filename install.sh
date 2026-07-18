@@ -6,6 +6,7 @@ echo ""
 echo "What drive is yours? (/dev/sdX)"
 read DISK
 echo "Ok you wrote $DISK but that doesnt seem right to me. your the boss though. nerd. (CTRL+C to exit)" #Put them on edge
+read nothing
 sfdisk --delete $DISK
 
 DSET="label: dos\n #drive setup that only goes up to 8GB and doesnt know less
@@ -28,7 +29,7 @@ mkdir /mnt/home
 mkdir /mnt/efi
 mount $DISK"1" /mnt/efi
 
-pacstrap -K /mnt base base-devel linux-hardened linux-firmware git grub intel-ucode efibootmgr inotify-tools nano vim vi networkmanager reflector
+pacstrap -d -K /mnt base ntfs-3g base-devel linux linux-firmware git grub intel-ucode efibootmgr inotify-tools nano vim vi networkmanager reflector
 # in classic linux, sound was bad. we are larping old linux sound
 
 genfstab -U /mnt >> /mnt/etc/fstab
