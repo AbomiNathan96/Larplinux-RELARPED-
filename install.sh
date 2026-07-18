@@ -29,7 +29,7 @@ mkdir /mnt/home
 mkdir /mnt/efi
 mount $DISK"1" /mnt/efi
 
-pacstrap -K /mnt base ntfs-3g base-devel linux linux-firmware git grub intel-ucode efibootmgr inotify-tools nano vim vi networkmanager reflector wget
+pacstrap -K /mnt base ntfs-3g base-devel linux linux-firmware dosfstools git grub intel-ucode efibootmgr inotify-tools nano vim vi networkmanager reflector wget
 # in classic linux, sound was bad. we are larping old linux sound
 
 genfstab -U /mnt >> /mnt/etc/fstab
