@@ -33,5 +33,7 @@ pacstrap -K /mnt base ntfs-3g base-devel linux linux-firmware git grub intel-uco
 # in classic linux, sound was bad. we are larping old linux sound
 
 genfstab -U /mnt >> /mnt/etc/fstab
-wget 
-arch-chroot /mnt
+cd /mnt
+wget https://raw.githubusercontent.com/AbomiNathan96/Larplinux-RELARPED-/refs/heads/main/installp2.sh
+chmod +x installp2.sh
+arch-chroot /mnt installp2.sh
