@@ -1,0 +1,14 @@
+# GRUB boot loader config
+
+GRUB_DEFUALT=0
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="Larp"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3"
+GRUB_CMDLINE_LINUX="rootfstype=ntfs-3g rootflags="permissions,acl,recover,noatime"
+
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+GRUB_TIMEOUT_STYLE=menu
+GRUB_TERMINAL_INPUT=console
+GRUB_GFXMODE=auto
+GRUB_GFXPAYLOAD_LINUX=keep
+GRUB_DISABLE_RECOVERY=true
