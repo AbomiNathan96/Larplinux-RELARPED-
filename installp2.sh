@@ -36,7 +36,7 @@ systemctl enable NetworkManager
 timedatectl set-ntp true
 wget https://github.com/AbomiNathan96/Larplinux-RELARPED-/raw/refs/heads/main/mkinitcpio.conf
 mv ./mkinitcpio.conf /etc
-mkinitcpio -g /boot/initramfs-linux -p linux
+mkinitcpio -p linux
 
 #exit#exit the chroot
 #umount -R /mnt
