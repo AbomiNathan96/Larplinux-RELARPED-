@@ -37,7 +37,7 @@ timedatectl set-ntp true
 wget https://github.com/AbomiNathan96/Larplinux-RELARPED-/raw/refs/heads/main/mkinitcpio.conf
 mv ./mkinitcpio.conf /etc
 mkinitcpio -p linux
-grub-install --efi-directory=/efi --bootloader-id=GRUB  
+grub-install --efi-directory=/efi --bootloader-id=LARP  
 grub-mkconfig -o /boot/grub/grub.cfg
 #exit#exit the chroot
 #umount -R /mnt
