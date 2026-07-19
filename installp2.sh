@@ -30,7 +30,7 @@ read nothing
 EDITOR=nano visudo
 wget https://raw.githubusercontent.com/AbomiNathan96/Larplinux-RELARPED-/refs/heads/main/grub
 mv ./grub /etc/default
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB  
+grub-install --efi-directory=/efi --bootloader-id=GRUB  
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 timedatectl set-ntp true
